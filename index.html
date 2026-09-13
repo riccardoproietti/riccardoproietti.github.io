@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,23 +22,71 @@ nav a{margin-right:1.2rem}
   padding:.8rem 1rem;border-radius:0 6px 6px 0;font-size:.94rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bordo);
   color:var(--tenue);font-family:system-ui,sans-serif;font-size:.85rem}
+.lingue{font-family:system-ui,sans-serif;font-size:.85rem;margin:0 0 1.5rem;color:var(--tenue)}
+.yt{display:flex;gap:.9rem;align-items:center;border:1px solid var(--bordo);border-radius:10px;padding:.9rem 1rem;margin:1.2rem 0 2rem;font-family:system-ui,sans-serif;font-size:.92rem}
+.yt .marchio{flex:none;font-weight:700;letter-spacing:-.01em;background:#ff0000;color:#fff;border-radius:6px;padding:.3rem .6rem;font-size:.9rem}
+hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
 </style>
 </head>
 <body>
 
 <h1>Uploader Multicanale</h1>
-<p class="data">Strumento personale per la pubblicazione di video di divulgazione scientifica</p>
+<p class="data">Personal publishing tool for science-communication videos</p>
+<p class="lingue"><a href="#en">English</a> · <a href="#it">Italiano</a></p>
 
 <nav>
-  <a href="privacy.html">Informativa sulla privacy</a>
-  <a href="termini.html">Termini di servizio</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="termini.html">Terms of Service</a>
 </nav>
 
+<div class="yt">
+  <span class="marchio">YouTube</span>
+  <span>
+    This application uses <strong>YouTube API Services</strong>. By using it you agree to the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and your data is handled
+    in accordance with the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+  </span>
+</div>
+
+<section id="en">
 <p>
-  <strong>Uploader Multicanale</strong> è un programma che gira sul computer del suo
-  autore e serve a pubblicare i propri video di divulgazione sulle neuroscienze,
-  tradotti e doppiati in più lingue, sui propri canali YouTube, Instagram, Facebook
-  e TikTok.
+  <strong>Uploader Multicanale</strong> is a desktop application that runs on its author's own
+  computer. It publishes the author's own neuroscience-education videos, translated and dubbed
+  into several languages, to the author's own YouTube channels (one channel per language), and to
+  the author's own Instagram, Facebook and TikTok accounts.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>reads finished, already-dubbed videos from the local disk, one file per language;</li>
+  <li>prepares a title, description and hashtags for each language;</li>
+  <li>shows everything to the author in a review screen, where each item is corrected and approved by hand;</li>
+  <li>uploads only the approved videos, through each platform's official API, to the author's own accounts;</li>
+  <li>keeps track of each platform's daily quota and postpones whatever does not fit to the next day.</li>
+</ul>
+
+<h2>Who uses it</h2>
+<p>
+  Only its author, on accounts the author owns. It is not a service, has no sign-up, has no other
+  users, and never publishes on behalf of third parties.
+</p>
+
+<h2>How data is handled</h2>
+<p>
+  Everything runs locally; there is no server. Videos, texts and access credentials stay on the
+  author's computer, and access tokens are stored encrypted. No third-party data is collected,
+  transmitted or sold. Details are in the <a href="privacy.html">Privacy Policy</a>.
+</p>
+</section>
+
+<hr class="sep">
+
+<section id="it" lang="it">
+<p>
+  <strong>Uploader Multicanale</strong> è un programma che gira sul computer del suo autore e
+  serve a pubblicare i propri video di divulgazione sulle neuroscienze, tradotti e doppiati in più
+  lingue, sui propri canali YouTube (uno per lingua) e sui propri account Instagram, Facebook e
+  TikTok.
 </p>
 
 <h2>Che cosa fa</h2>
@@ -46,34 +94,32 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bordo);
   <li>legge dal disco locale i video già prodotti e doppiati, uno per ogni lingua;</li>
   <li>prepara per ciascuna lingua titolo, descrizione e hashtag;</li>
   <li>li mostra all'autore in una schermata di revisione, dove vengono corretti e approvati uno per uno;</li>
-  <li>carica i video approvati sui canali dell'autore attraverso le API ufficiali di ogni piattaforma;</li>
-  <li>tiene il conto delle quote giornaliere di ogni piattaforma e rimanda al giorno seguente ciò che non vi rientra.</li>
+  <li>carica solo i video approvati sui canali dell'autore, attraverso le API ufficiali di ogni piattaforma;</li>
+  <li>tiene il conto delle quote giornaliere e rimanda al giorno seguente ciò che non vi rientra.</li>
 </ul>
 
 <h2>Chi lo usa</h2>
 <p>
-  Soltanto il suo autore, sui propri account. Non è un servizio, non ha registrazione,
-  non ha utenti oltre a chi lo ha scritto e non pubblica per conto di terzi.
+  Soltanto il suo autore, sui propri account. Non è un servizio, non ha registrazione, non ha altri
+  utenti e non pubblica per conto di terzi.
 </p>
 
 <h2>Come tratta i dati</h2>
 <p>
-  Il programma gira interamente in locale. Non esiste alcun server: i video, i testi e
-  le credenziali di accesso restano sul computer dell'autore. I token di accesso sono
-  conservati cifrati. Non viene raccolto, trasmesso o venduto alcun dato di terze parti.
-  I dettagli sono nell'<a href="privacy.html">informativa sulla privacy</a>.
+  Tutto gira in locale, non esiste alcun server. Video, testi e credenziali restano sul computer
+  dell'autore; i token di accesso sono conservati cifrati. Non viene raccolto, trasmesso o venduto
+  alcun dato di terze parti. I dettagli sono nell'<a href="privacy.html#it">informativa sulla privacy</a>.
 </p>
 
-<h2>Uso delle API di YouTube</h2>
 <p class="nota">
   Questa applicazione utilizza i Servizi API di YouTube. Usandola, l'utente accetta i
-  <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a> ed è
-  soggetto all'<a href="https://policies.google.com/privacy">Informativa sulla privacy
-  di Google</a>.
+  <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a> ed è soggetto
+  all'<a href="https://policies.google.com/privacy">Informativa sulla privacy di Google</a>.
 </p>
+</section>
 
 <footer>
-  Contatto: <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>
+  Contact / Contatto: <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>
 </footer>
 
 </body>

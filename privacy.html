@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Informativa sulla privacy — Uploader Multicanale</title>
+<title>Privacy Policy — Uploader Multicanale</title>
 <style>
 :root{--sfondo:#fbfaf8;--testo:#1c1b19;--tenue:#6b6a65;--acc:#b45309;--bordo:#e4e2dd}
 @media(prefers-color-scheme:dark){:root{--sfondo:#17171a;--testo:#e9e8e5;--tenue:#9b9a95;--acc:#f59e0b;--bordo:#31313a}}
@@ -22,23 +22,125 @@ nav a{margin-right:1.2rem}
   padding:.8rem 1rem;border-radius:0 6px 6px 0;font-size:.94rem}
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bordo);
   color:var(--tenue);font-family:system-ui,sans-serif;font-size:.85rem}
+.lingue{font-family:system-ui,sans-serif;font-size:.85rem;margin:0 0 1.5rem;color:var(--tenue)}
+.yt{display:flex;gap:.9rem;align-items:center;border:1px solid var(--bordo);border-radius:10px;padding:.9rem 1rem;margin:1.2rem 0 2rem;font-family:system-ui,sans-serif;font-size:.92rem}
+.yt .marchio{flex:none;font-weight:700;letter-spacing:-.01em;background:#ff0000;color:#fff;border-radius:6px;padding:.3rem .6rem;font-size:.9rem}
+hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
 </style>
 </head>
 <body>
 
-<h1>Informativa sulla privacy</h1>
-<p class="data">Uploader Multicanale · in vigore dal 9 settembre 2026</p>
+<h1>Privacy Policy</h1>
+<p class="data">Uploader Multicanale · effective 14 September 2026</p>
+<p class="lingue"><a href="#en">English</a> · <a href="#it">Italiano</a></p>
 
 <nav>
-  <a href="index.html">Pagina iniziale</a>
-  <a href="termini.html">Termini di servizio</a>
+  <a href="index.html">Home</a>
+  <a href="termini.html">Terms of Service</a>
 </nav>
 
+<section id="en">
 <p>
-  Uploader Multicanale è un programma personale che gira sul computer del suo autore.
-  Non è un servizio online, non ha un server, non ha utenti registrati e non raccoglie
-  dati da nessuno. Questa informativa descrive con precisione quali dati il programma
-  tratta e dove restano.
+  Uploader Multicanale is a personal desktop application that runs on its author's computer. It is
+  not an online service: it has no server, no registered users, and it collects no data from anyone.
+  This policy describes exactly which data the application handles and where that data stays.
+</p>
+
+<h2>Who is responsible</h2>
+<p>
+  The author of the application, who is also its only user.
+  Contact: <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>.
+</p>
+
+<h2>Use of YouTube API Services</h2>
+<p class="nota">
+  This application uses YouTube API Services. By using it, you agree to be bound by the
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Data obtained through
+  YouTube API Services is also subject to the
+  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+  You can revoke this application's access to your data at any time from the
+  <a href="https://myaccount.google.com/permissions">Google security settings page</a>.
+</p>
+<p>
+  The application accesses YouTube API Services only to: identify the YouTube channel the author
+  has authorized (channel ID and title), upload the author's own videos and caption files to that
+  channel, and check that previously uploaded videos still exist. It does not read, collect or
+  store any data about viewers, subscribers, comments, or other channels.
+</p>
+
+<h2>Data the application handles</h2>
+<ul>
+  <li><strong>OAuth access and refresh tokens</strong> issued by Google, Meta and TikTok when the
+    author connects their own accounts.</li>
+  <li><strong>Account identifiers</strong> returned by those APIs: YouTube channel ID and title,
+    Facebook Page ID and name, Instagram professional account ID and username, TikTok open ID.</li>
+  <li><strong>Identifiers of uploaded videos</strong> (video ID and URL) returned after each upload.</li>
+  <li><strong>Local files</strong> produced by the author: videos, subtitles, titles, descriptions, hashtags.</li>
+  <li><strong>A local activity log</strong>: date, destination and outcome of each upload.</li>
+</ul>
+
+<h2>Data the application does NOT handle</h2>
+<ul>
+  <li>no data about viewers, subscribers, followers or any other person;</li>
+  <li>no statistics, analytics or metrics from any platform;</li>
+  <li>no content belonging to third parties;</li>
+  <li>no cookies, browsing data or advertising identifiers.</li>
+</ul>
+
+<h2>Where data is stored</h2>
+<p>
+  Only on the author's computer. The application sends nothing to any server of its own, because
+  none exists. Its only outbound communications are calls to the official YouTube, Meta and TikTok
+  APIs. Tokens are stored encrypted (Fernet: AES-128-CBC with HMAC-SHA256 authentication); the
+  encryption key is kept in a separate local file.
+</p>
+
+<h2>How long data is kept</h2>
+<ul>
+  <li><strong>Tokens</strong> are kept only while the author's authorization is active, and are
+    deleted as soon as it is revoked or no longer valid.</li>
+  <li><strong>Data obtained from YouTube API Services</strong> (channel ID and title, uploaded video
+    IDs and URLs) is re-verified against the API whenever it is older than 25 days, each time the
+    application runs. Data that cannot be re-verified within 30 days of its last verification is
+    deleted. If the authorization has been revoked, the channel no longer exists, or a video has been
+    removed from YouTube, the corresponding data is deleted immediately.</li>
+  <li><strong>Local files and the activity log</strong> are kept until the author deletes them.</li>
+</ul>
+
+<h2>How to delete data</h2>
+<ul>
+  <li>The command <code>Uploader.bat scollega youtube &lt;language&gt;</code> revokes the
+    authorization with Google and immediately deletes, from the computer, the tokens, the channel
+    data and all stored video identifiers for that channel. Equivalent commands exist for the other
+    platforms.</li>
+  <li>Access can also be revoked at any time from
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the
+    application then deletes the related data the next time it runs.</li>
+  <li>Any deletion request sent to the contact address above is carried out within 7 days.</li>
+</ul>
+
+<h2>Sharing with third parties</h2>
+<p>
+  None. Data is never sold, rented, transferred or shared. No analytics, advertising or profiling
+  services are used. Titles and descriptions are drafted by a language model that runs locally on
+  the author's computer; no content is sent to external AI services.
+</p>
+
+<h2>Changes</h2>
+<p>
+  Any update to this policy will be published on this page, with the effective date updated at the top.
+</p>
+</section>
+
+<hr class="sep">
+
+<section id="it" lang="it">
+<h1>Informativa sulla privacy</h1>
+
+<p>
+  Uploader Multicanale è un programma personale che gira sul computer del suo autore. Non è un
+  servizio online: non ha un server, non ha utenti registrati e non raccoglie dati da nessuno.
+  Questa informativa descrive con precisione quali dati il programma tratta e dove restano.
 </p>
 
 <h2>Chi tratta i dati</h2>
@@ -47,109 +149,82 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bordo);
   Contatto: <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>.
 </p>
 
-<h2>Quali dati vengono trattati</h2>
+<h2>Uso dei Servizi API di YouTube</h2>
+<p class="nota">
+  Questa applicazione utilizza i Servizi API di YouTube. Usandola, l'utente accetta i
+  <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a>. I dati ottenuti
+  tramite i Servizi API di YouTube sono soggetti anche all'<a href="https://policies.google.com/privacy">Informativa
+  sulla privacy di Google</a>. L'accesso può essere revocato in qualsiasi momento dalla
+  <a href="https://myaccount.google.com/permissions">pagina di sicurezza dell'Account Google</a>.
+</p>
+<p>
+  L'applicazione usa i Servizi API di YouTube soltanto per: identificare il canale autorizzato
+  dall'autore (ID e nome), caricare su quel canale i video e i sottotitoli dell'autore, e
+  controllare che i video caricati esistano ancora. Non legge, raccoglie né conserva dati su
+  spettatori, iscritti, commenti o altri canali.
+</p>
+
+<h2>Dati trattati</h2>
 <ul>
-  <li>
-    <strong>Token di accesso e di aggiornamento</strong> rilasciati da Google, Meta e
-    TikTok quando l'autore collega i propri account, insieme agli identificativi
-    pubblici di quegli account (identificativo del canale YouTube, della Pagina
-    Facebook, dell'account Instagram professionale, dell'account TikTok).
-  </li>
-  <li>
-    <strong>File video e sottotitoli</strong> prodotti dall'autore, già presenti sul
-    suo computer.
-  </li>
-  <li>
-    <strong>Testi di pubblicazione</strong> (titoli, descrizioni, hashtag) scritti o
-    rivisti dall'autore.
-  </li>
-  <li>
-    <strong>Registro delle pubblicazioni</strong>: data, destinazione ed esito di ogni
-    caricamento, con l'eventuale messaggio di errore restituito dalla piattaforma.
-  </li>
+  <li><strong>Token OAuth</strong> di accesso e di aggiornamento rilasciati da Google, Meta e TikTok
+    quando l'autore collega i propri account.</li>
+  <li><strong>Identificativi degli account</strong> restituiti dalle API: ID e nome del canale
+    YouTube, ID e nome della Pagina Facebook, ID e nome dell'account Instagram professionale, open ID TikTok.</li>
+  <li><strong>Identificativi dei video caricati</strong> (ID e indirizzo) restituiti dopo ogni caricamento.</li>
+  <li><strong>File locali</strong> prodotti dall'autore: video, sottotitoli, titoli, descrizioni, hashtag.</li>
+  <li><strong>Un registro locale</strong>: data, destinazione ed esito di ogni caricamento.</li>
 </ul>
 
-<h2>Quali dati NON vengono trattati</h2>
+<h2>Dati NON trattati</h2>
 <ul>
   <li>nessun dato di spettatori, iscritti, follower o di qualunque altra persona;</li>
   <li>nessuna statistica, metrica o dato analitico delle piattaforme;</li>
   <li>nessun contenuto appartenente a terzi;</li>
-  <li>nessun dato di navigazione, nessun cookie, nessun identificativo pubblicitario.</li>
+  <li>nessun cookie, dato di navigazione o identificativo pubblicitario.</li>
 </ul>
 
 <h2>Dove restano i dati</h2>
 <p>
-  Tutto resta sul computer dell'autore. Il programma non trasmette dati ad alcun server
-  proprio, perché non ne esiste alcuno. Le sole comunicazioni verso l'esterno sono le
-  chiamate alle API ufficiali di YouTube, Meta e TikTok, necessarie a caricare i video
-  sugli account dell'autore.
-</p>
-<p>
-  I token sono conservati cifrati con l'algoritmo Fernet (AES-128 in modalità CBC con
-  autenticazione HMAC-SHA256) in un file locale; la chiave di cifratura è custodita
-  separatamente e non lascia mai il computer.
+  Solo sul computer dell'autore. Il programma non invia nulla a server propri, perché non ne esistono.
+  Le sole comunicazioni verso l'esterno sono le chiamate alle API ufficiali di YouTube, Meta e TikTok.
+  I token sono cifrati (Fernet: AES-128-CBC con autenticazione HMAC-SHA256); la chiave è in un file locale separato.
 </p>
 
 <h2>Per quanto tempo</h2>
-<p>
-  I token restano finché l'autore non scollega l'account o non revoca l'accesso. Il
-  registro delle pubblicazioni resta finché l'autore non lo cancella. Non esistono
-  copie di riserva presso terzi.
-</p>
+<ul>
+  <li><strong>I token</strong> restano solo finché l'autorizzazione è attiva, e vengono cancellati
+    appena viene revocata o non è più valida.</li>
+  <li><strong>I dati ottenuti dai Servizi API di YouTube</strong> (ID e nome del canale, ID e
+    indirizzi dei video caricati) vengono riverificati con l'API quando hanno più di 25 giorni, a ogni
+    avvio del programma. I dati che non si possono riverificare entro 30 giorni dall'ultima verifica
+    vengono cancellati. Se l'autorizzazione è stata revocata, il canale non esiste più o un video è
+    stato rimosso da YouTube, i dati corrispondenti vengono cancellati subito.</li>
+  <li><strong>I file locali e il registro</strong> restano finché l'autore non li cancella.</li>
+</ul>
 
 <h2>Come cancellare i dati</h2>
 <ul>
-  <li>
-    <strong>Token</strong>: eliminando il file <code>config/segreti/token.enc</code>
-    dal computer, oppure la relativa chiave.
-  </li>
-  <li>
-    <strong>Autorizzazione Google</strong>: revocabile in qualsiasi momento da
-    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
-  </li>
-  <li>
-    <strong>Autorizzazione Meta</strong>: dalle impostazioni delle app collegate di
-    Facebook e Instagram.
-  </li>
-  <li>
-    <strong>Autorizzazione TikTok</strong>: dalle impostazioni di sicurezza dell'account TikTok.
-  </li>
-  <li>
-    <strong>Registro locale</strong>: eliminando il file <code>dati/archivio.db</code>.
-  </li>
+  <li>Il comando <code>Uploader.bat scollega youtube &lt;lingua&gt;</code> revoca l'autorizzazione
+    presso Google e cancella subito dal computer token, dati del canale e tutti gli identificativi dei
+    video di quel canale. Esistono comandi equivalenti per le altre piattaforme.</li>
+  <li>L'accesso si può revocare anche da
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; il
+    programma cancella i dati collegati al primo avvio successivo.</li>
+  <li>Ogni richiesta di cancellazione inviata all'indirizzo di contatto viene eseguita entro 7 giorni.</li>
 </ul>
 
 <h2>Condivisione con terzi</h2>
 <p>
-  Nessuna. I dati non vengono venduti, ceduti, affittati né condivisi con alcuno. Non
-  sono impiegati servizi di analisi, pubblicità o profilazione. La generazione dei testi
-  avviene con un modello linguistico eseguito in locale sul computer dell'autore, senza
-  che alcun contenuto venga inviato a servizi esterni.
-</p>
-
-<h2>Uso dei Servizi API di YouTube</h2>
-<p class="nota">
-  Questa applicazione utilizza i Servizi API di YouTube. Usandola, l'utente accetta i
-  <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a>.
-  I dati trattati da Google sono soggetti all'<a href="https://policies.google.com/privacy">Informativa
-  sulla privacy di Google</a>. L'utente può revocare l'accesso di questa applicazione
-  ai propri dati in qualsiasi momento dalla
-  <a href="https://myaccount.google.com/permissions">pagina delle app collegate</a> del
-  proprio Account Google.
-</p>
-<p>
-  L'applicazione non memorizza né utilizza dati provenienti dai Servizi API di YouTube
-  oltre a quanto strettamente necessario per caricare i video dell'autore sul proprio
-  canale: l'identificativo del canale, l'identificativo del video caricato e l'esito
-  dell'operazione. Nessun dato dell'utente autorizzato viene conservato oltre la durata
-  dell'autorizzazione.
+  Nessuna. I dati non vengono venduti, ceduti, affittati né condivisi. Non sono usati servizi di
+  analisi, pubblicità o profilazione. Titoli e descrizioni sono scritti da un modello linguistico
+  eseguito in locale; nessun contenuto viene inviato a servizi di intelligenza artificiale esterni.
 </p>
 
 <h2>Modifiche</h2>
 <p>
-  Eventuali aggiornamenti di questa informativa saranno pubblicati su questa stessa
-  pagina, con la data di entrata in vigore aggiornata in cima.
+  Eventuali aggiornamenti saranno pubblicati su questa pagina, con la data aggiornata in cima.
 </p>
+</section>
 
 <footer>
   Uploader Multicanale · <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>
