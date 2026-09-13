@@ -100,8 +100,9 @@ hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
   <li><strong>Tokens</strong> are kept only while the author's authorization is active, and are
     deleted as soon as it is revoked or no longer valid.</li>
   <li><strong>Data obtained from YouTube API Services</strong> (channel ID and title, uploaded video
-    IDs and URLs) is re-verified against the API whenever it is older than 25 days, each time the
-    application runs. Data that cannot be re-verified within 30 days of its last verification is
+    IDs and URLs) is re-verified against the API whenever it is older than 25 days. This check runs
+    every time the application publishes or its review panel is opened, and once a day through a
+    scheduled task. Data that cannot be re-verified within 30 days of its last verification is
     deleted. If the authorization has been revoked, the channel no longer exists, or a video has been
     removed from YouTube, the corresponding data is deleted immediately.</li>
   <li><strong>Local files and the activity log</strong> are kept until the author deletes them.</li>
@@ -115,7 +116,8 @@ hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
     platforms.</li>
   <li>Access can also be revoked at any time from
     <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the
-    application then deletes the related data the next time it runs.</li>
+    application detects the revocation at its next check (next publication, review panel opening, or
+    the daily scheduled check) and deletes the related data at that moment.</li>
   <li>Any deletion request sent to the contact address above is carried out within 7 days.</li>
 </ul>
 
@@ -195,8 +197,9 @@ hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
   <li><strong>I token</strong> restano solo finché l'autorizzazione è attiva, e vengono cancellati
     appena viene revocata o non è più valida.</li>
   <li><strong>I dati ottenuti dai Servizi API di YouTube</strong> (ID e nome del canale, ID e
-    indirizzi dei video caricati) vengono riverificati con l'API quando hanno più di 25 giorni, a ogni
-    avvio del programma. I dati che non si possono riverificare entro 30 giorni dall'ultima verifica
+    indirizzi dei video caricati) vengono riverificati con l'API quando hanno più di 25 giorni. Il
+    controllo avviene a ogni pubblicazione, a ogni apertura del pannello di revisione e una volta al
+    giorno tramite un'attività pianificata. I dati che non si possono riverificare entro 30 giorni dall'ultima verifica
     vengono cancellati. Se l'autorizzazione è stata revocata, il canale non esiste più o un video è
     stato rimosso da YouTube, i dati corrispondenti vengono cancellati subito.</li>
   <li><strong>I file locali e il registro</strong> restano finché l'autore non li cancella.</li>
@@ -209,7 +212,8 @@ hr.sep{border:0;border-top:2px solid var(--bordo);margin:3.5rem 0 2rem}
     video di quel canale. Esistono comandi equivalenti per le altre piattaforme.</li>
   <li>L'accesso si può revocare anche da
     <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; il
-    programma cancella i dati collegati al primo avvio successivo.</li>
+    programma rileva la revoca al controllo successivo (prossima pubblicazione, apertura del pannello o
+    verifica giornaliera) e cancella in quel momento i dati collegati.</li>
   <li>Ogni richiesta di cancellazione inviata all'indirizzo di contatto viene eseguita entro 7 giorni.</li>
 </ul>
 
