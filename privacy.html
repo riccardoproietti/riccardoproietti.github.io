@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Informativa sulla privacy — Uploader Multicanale</title>
+<style>
+:root{--sfondo:#fbfaf8;--testo:#1c1b19;--tenue:#6b6a65;--acc:#b45309;--bordo:#e4e2dd}
+@media(prefers-color-scheme:dark){:root{--sfondo:#17171a;--testo:#e9e8e5;--tenue:#9b9a95;--acc:#f59e0b;--bordo:#31313a}}
+*{box-sizing:border-box}
+body{margin:0 auto;padding:2.5rem 1.5rem 4rem;max-width:44rem;background:var(--sfondo);
+  color:var(--testo);font:16px/1.65 Georgia,"Times New Roman",serif}
+h1{font-size:1.75rem;line-height:1.2;margin:0 0 .3rem}
+h2{font-size:1.15rem;margin:2.2rem 0 .6rem;padding-top:1.2rem;border-top:1px solid var(--bordo)}
+p,li{margin:.7rem 0}
+ul{padding-left:1.3rem}
+a{color:var(--acc)}
+nav{margin:1.5rem 0 2rem;font-family:system-ui,sans-serif;font-size:.9rem}
+nav a{margin-right:1.2rem}
+.data{color:var(--tenue);font-family:system-ui,sans-serif;font-size:.85rem;margin:0 0 2rem}
+.nota{background:color-mix(in srgb,var(--acc) 9%,transparent);border-left:3px solid var(--acc);
+  padding:.8rem 1rem;border-radius:0 6px 6px 0;font-size:.94rem}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bordo);
+  color:var(--tenue);font-family:system-ui,sans-serif;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<h1>Informativa sulla privacy</h1>
+<p class="data">Uploader Multicanale · in vigore dal 9 settembre 2026</p>
+
+<nav>
+  <a href="index.html">Pagina iniziale</a>
+  <a href="termini.html">Termini di servizio</a>
+</nav>
+
+<p>
+  Uploader Multicanale è un programma personale che gira sul computer del suo autore.
+  Non è un servizio online, non ha un server, non ha utenti registrati e non raccoglie
+  dati da nessuno. Questa informativa descrive con precisione quali dati il programma
+  tratta e dove restano.
+</p>
+
+<h2>Chi tratta i dati</h2>
+<p>
+  L'autore del programma, che ne è anche l'unico utilizzatore.
+  Contatto: <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>.
+</p>
+
+<h2>Quali dati vengono trattati</h2>
+<ul>
+  <li>
+    <strong>Token di accesso e di aggiornamento</strong> rilasciati da Google, Meta e
+    TikTok quando l'autore collega i propri account, insieme agli identificativi
+    pubblici di quegli account (identificativo del canale YouTube, della Pagina
+    Facebook, dell'account Instagram professionale, dell'account TikTok).
+  </li>
+  <li>
+    <strong>File video e sottotitoli</strong> prodotti dall'autore, già presenti sul
+    suo computer.
+  </li>
+  <li>
+    <strong>Testi di pubblicazione</strong> (titoli, descrizioni, hashtag) scritti o
+    rivisti dall'autore.
+  </li>
+  <li>
+    <strong>Registro delle pubblicazioni</strong>: data, destinazione ed esito di ogni
+    caricamento, con l'eventuale messaggio di errore restituito dalla piattaforma.
+  </li>
+</ul>
+
+<h2>Quali dati NON vengono trattati</h2>
+<ul>
+  <li>nessun dato di spettatori, iscritti, follower o di qualunque altra persona;</li>
+  <li>nessuna statistica, metrica o dato analitico delle piattaforme;</li>
+  <li>nessun contenuto appartenente a terzi;</li>
+  <li>nessun dato di navigazione, nessun cookie, nessun identificativo pubblicitario.</li>
+</ul>
+
+<h2>Dove restano i dati</h2>
+<p>
+  Tutto resta sul computer dell'autore. Il programma non trasmette dati ad alcun server
+  proprio, perché non ne esiste alcuno. Le sole comunicazioni verso l'esterno sono le
+  chiamate alle API ufficiali di YouTube, Meta e TikTok, necessarie a caricare i video
+  sugli account dell'autore.
+</p>
+<p>
+  I token sono conservati cifrati con l'algoritmo Fernet (AES-128 in modalità CBC con
+  autenticazione HMAC-SHA256) in un file locale; la chiave di cifratura è custodita
+  separatamente e non lascia mai il computer.
+</p>
+
+<h2>Per quanto tempo</h2>
+<p>
+  I token restano finché l'autore non scollega l'account o non revoca l'accesso. Il
+  registro delle pubblicazioni resta finché l'autore non lo cancella. Non esistono
+  copie di riserva presso terzi.
+</p>
+
+<h2>Come cancellare i dati</h2>
+<ul>
+  <li>
+    <strong>Token</strong>: eliminando il file <code>config/segreti/token.enc</code>
+    dal computer, oppure la relativa chiave.
+  </li>
+  <li>
+    <strong>Autorizzazione Google</strong>: revocabile in qualsiasi momento da
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  </li>
+  <li>
+    <strong>Autorizzazione Meta</strong>: dalle impostazioni delle app collegate di
+    Facebook e Instagram.
+  </li>
+  <li>
+    <strong>Autorizzazione TikTok</strong>: dalle impostazioni di sicurezza dell'account TikTok.
+  </li>
+  <li>
+    <strong>Registro locale</strong>: eliminando il file <code>dati/archivio.db</code>.
+  </li>
+</ul>
+
+<h2>Condivisione con terzi</h2>
+<p>
+  Nessuna. I dati non vengono venduti, ceduti, affittati né condivisi con alcuno. Non
+  sono impiegati servizi di analisi, pubblicità o profilazione. La generazione dei testi
+  avviene con un modello linguistico eseguito in locale sul computer dell'autore, senza
+  che alcun contenuto venga inviato a servizi esterni.
+</p>
+
+<h2>Uso dei Servizi API di YouTube</h2>
+<p class="nota">
+  Questa applicazione utilizza i Servizi API di YouTube. Usandola, l'utente accetta i
+  <a href="https://www.youtube.com/t/terms">Termini di servizio di YouTube</a>.
+  I dati trattati da Google sono soggetti all'<a href="https://policies.google.com/privacy">Informativa
+  sulla privacy di Google</a>. L'utente può revocare l'accesso di questa applicazione
+  ai propri dati in qualsiasi momento dalla
+  <a href="https://myaccount.google.com/permissions">pagina delle app collegate</a> del
+  proprio Account Google.
+</p>
+<p>
+  L'applicazione non memorizza né utilizza dati provenienti dai Servizi API di YouTube
+  oltre a quanto strettamente necessario per caricare i video dell'autore sul proprio
+  canale: l'identificativo del canale, l'identificativo del video caricato e l'esito
+  dell'operazione. Nessun dato dell'utente autorizzato viene conservato oltre la durata
+  dell'autorizzazione.
+</p>
+
+<h2>Modifiche</h2>
+<p>
+  Eventuali aggiornamenti di questa informativa saranno pubblicati su questa stessa
+  pagina, con la data di entrata in vigore aggiornata in cima.
+</p>
+
+<footer>
+  Uploader Multicanale · <a href="mailto:proricca94@gmail.com">proricca94@gmail.com</a>
+</footer>
+
+</body>
+</html>
